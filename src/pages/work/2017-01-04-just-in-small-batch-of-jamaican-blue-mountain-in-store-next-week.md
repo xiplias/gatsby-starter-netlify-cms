@@ -1,5 +1,5 @@
 ---
-templateKey: product-page
+templateKey: "work"
 title: A better cinema experience.
 company: BEOPLAY
 details:

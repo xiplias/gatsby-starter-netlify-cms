@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProductPageTemplate } from "../../templates/product-page";
+import { WorkTemplate } from "../../templates/work";
 
-const ProductPagePreview = ({ entry, getAsset }) => {
+const WorkPreview = ({ entry, getAsset }) => {
   return (
-    <ProductPageTemplate
+    <WorkTemplate
       title={entry.getIn(["data", "title"])}
       company={entry.getIn(["data", "company"])}
       details={entry.getIn(["data", "details"]).toJS()}
@@ -12,11 +12,11 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   );
 };
 
-ProductPagePreview.propTypes = {
+WorkPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default ProductPagePreview;
+export default WorkPreview;

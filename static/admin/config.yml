@@ -23,50 +23,48 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "product-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Company, name: company, widget: string }
-          - {
-              label: Details,
-              name: details,
-              widget: object,
-              fields:
-                [
-                  {
-                    label: Clients,
-                    name: clients,
-                    widget: list,
-                    fields: [{ label: Name, name: name, widget: string }],
-                  },
-                  { label: Deliverables, name: deliverables, widget: string },
-                  {
-                    label: Downloads,
-                    name: downloads,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Name, name: name, widget: string },
-                        { label: Link, name: link, widget: string },
-                      ],
-                  },
-                  {
-                    label: Credits,
-                    name: credits,
-                    widget: list,
-                    fields: [{ label: Name, name: name, widget: string }],
-                  },
-                ],
-            }
+  - name: "Work"
+    label: "work"
+    folder: "src/pages/work"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "work",
+        }
+      - { label: Title, name: title, widget: string }
+      - { label: Company, name: company, widget: string }
+      - {
+          label: Details,
+          name: details,
+          widget: object,
+          fields:
+            [
+              {
+                label: Clients,
+                name: clients,
+                widget: list,
+                fields: [{ label: Name, name: name, widget: string }],
+              },
+              { label: Deliverables, name: deliverables, widget: string },
+              {
+                label: Downloads,
+                name: downloads,
+                widget: list,
+                fields:
+                  [
+                    { label: Name, name: name, widget: string },
+                    { label: Link, name: link, widget: string },
+                  ],
+              },
+              {
+                label: Credits,
+                name: credits,
+                widget: list,
+                fields: [{ label: Name, name: name, widget: string }],
+              },
+            ],
+        }

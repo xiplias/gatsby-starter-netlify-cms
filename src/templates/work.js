@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
-export const ProductPageTemplate = ({
+export const WorkTemplate = ({
   title,
   company,
   details: { clients, deliverables, downloads, credits }
@@ -48,26 +48,22 @@ export const ProductPageTemplate = ({
   </section>
 );
 
-ProductPageTemplate.propTypes = {
+WorkTemplate.propTypes = {
   title: PropTypes.string,
   company: PropTypes.string
 };
 
-const ProductPage = ({ data }) => {
+const Work = ({ data }) => {
   const { frontmatter: f } = data.markdownRemark;
 
   return (
     <Layout>
-      <ProductPageTemplate
-        title={f.title}
-        company={f.company}
-        details={f.details}
-      />
+      <WorkTemplate title={f.title} company={f.company} details={f.details} />
     </Layout>
   );
 };
 
-ProductPage.propTypes = {
+Work.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.objectOf({
@@ -97,10 +93,10 @@ ProductPage.propTypes = {
   })
 };
 
-export default ProductPage;
+export default Work;
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const workQuery = graphql`
+  query Work($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         company
