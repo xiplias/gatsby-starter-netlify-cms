@@ -27,7 +27,7 @@ collections:
     label: "work"
     folder: "src/pages/work"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",
