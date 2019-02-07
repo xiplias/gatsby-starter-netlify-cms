@@ -1,5 +1,23 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+@font-face
+  font-family: "BaconBold"
+  src: url("/fonts/BaconBold.woff2") format("woff2"),url("/fonts/BaconBold.woff") format("woff"),url("/fonts/BaconBold.otf") format("opentype")
+
+@font-face
+  font-family: "BaconVeryBold"
+  src: url("/fonts/BaconVeryBold.woff2") format("woff2"),url("/fonts/BaconVeryBold.woff") format("woff"),url("/fonts/BaconVeryBold.otf") format("opentype")
+
+
+@font-face
+  font-family: "BaconLight"
+  src: url("/fonts/BaconLight.woff2") format("woff2"),url("/fonts/BaconLight.woff") format("woff"),url("/fonts/BaconLight.otf") format("opentype")
+        
+@font-face
+  font-family: "BaconRegular"
+  src: url("/fonts/BaconRegular.woff2") format("woff2"),url("/fonts/BaconRegular.woff") format("woff"),url("/fonts/BaconRegular.otf") format("opentype")
+        
+
 // Config vars
 // Kalidi logo brand color: #FD461E
 $kaldi-red: #D64000
@@ -10,6 +28,7 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 
 .navbar .navbar-menu
+  margin-top: 27px
   box-shadow:none !important
 
 .content .taglist
@@ -43,5 +62,26 @@ $body-color: #333
 
 .margin-top-0
   margin-top: 0 !important
+
+.work 
+  .work-product-title
+    font-family: BaconVeryBold
+    color: rgba(24, 24, 24, 0.8)
+    padding-left: 2px
+  .work-title
+    font-family: BaconRegular
+    font-size: 52px
+    margin-top: 16px
+    margin-bottom: 78px
+    line-height: normal
+  .work-details-title
+    font-family: BaconVeryBold
+    color: #b7b7b7
+    margin-bottom: 13px
+    font-size: 12px
+  .work-details-text, .work-details-text a
+    font-weight: BaconRegular
+    color: #181818
+    font-size: 14px
 
 @import "~bulma"

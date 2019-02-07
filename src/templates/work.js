@@ -8,36 +8,40 @@ export const WorkTemplate = ({
   company,
   details: { clients, deliverables, downloads, credits }
 }) => (
-  <section className="section section--gradient">
+  <section className="section section--gradient work">
     <div className="container">
-      <div className="content">
-        <div className="columns">
-          <div className="column is-12">
-            <h5>{company}</h5>
-            <h3 className="has-text-weight-semibold is-size-2">{title}</h3>
-          </div>
+      <div className="columns">
+        <div className="column is-12">
+          <h5 className="work-product-title">{company}</h5>
+          <h3 className="work-title">{title}</h3>
         </div>
-        <div className="columns">
-          <div className="column is-narrow">
-            <h5>CLIENTS</h5>
+      </div>
+      <div className="columns">
+        <div className="column is-narrow">
+          <h5 className="work-details-title">CLIENTS</h5>
+          <div className="work-details-text">
             {(clients || []).map(({ name }) => (
               <div key={name}>{name}</div>
             ))}
           </div>
-          <div className="column is-3">
-            <h5>DELIVERABLES</h5>
-            {deliverables}
-          </div>
-          <div className="column is-narrow">
-            <h5>DOWNLOADS</h5>
+        </div>
+        <div className="column is-3">
+          <h5 className="work-details-title">DELIVERABLES</h5>
+          <div className="work-details-text">{deliverables}</div>
+        </div>
+        <div className="column is-narrow">
+          <h5 className="work-details-title">DOWNLOADS</h5>
+          <div className="work-details-text">
             {(downloads || []).map(({ name, link }) => (
               <a key={link} href={link}>
-                {name}
+                {name} ›
               </a>
             ))}
           </div>
-          <div className="column is-narrow">
-            <h5>CREDITS</h5>
+        </div>
+        <div className="column is-narrow">
+          <h5 className="work-details-title">CREDITS</h5>
+          <div className="work-details-text">
             {(credits || []).map(({ name }) => (
               <div key={name}>{name}</div>
             ))}
@@ -62,37 +66,6 @@ const Work = ({ data }) => {
     </Layout>
   );
 };
-
-Work.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.objectOf({
-        company: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        details: PropTypes.objectOf({
-          clients: PropTypes.arrayOf(
-            PropTypes.shape({
-              name: PropTypes.string.isRequired
-            })
-          ),
-          downloads: PropTypes.arrayOf(
-            PropTypes.shape({
-              name: PropTypes.string.isRequired,
-              link: PropTypes.string.isRequired
-            })
-          ),
-          credits: PropTypes.arrayOf(
-            PropTypes.shape({
-              name: PropTypes.string.isRequired
-            })
-          ),
-          deliverables: PropTypes.string
-        })
-      })
-    })
-  })
-};
-
 export default Work;
 
 export const workQuery = graphql`
