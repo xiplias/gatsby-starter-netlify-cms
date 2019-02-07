@@ -4,12 +4,12 @@ title: A better cinema experience.
 company: BEOPLAY
 details:
   clients:
-    - name: ADSasd
+    - name: Nordisk Film
   credits:
-    - name: asdasdas
-  deliverables: asdasd
+    - name: Nordisk Film
+  deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
-    - link: asdasd
-      name: asdasd
+    - link: 'http://nordiskfilm.dk'
+      name: Nordisk Film
 ---
 
