@@ -10,6 +10,6 @@ details:
   deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
     - link: 'http://nordiskfilm.dk'
-      name: Nordisk Film
+      name: App Store
 ---
 
