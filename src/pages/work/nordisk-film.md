@@ -1,7 +1,7 @@
 ---
 templateKey: work
-title: Nordisk Film
-company: Test
+title: A better cinema experience.
+company: BEOPLAY
 details:
   clients:
     - name: ADSasd
