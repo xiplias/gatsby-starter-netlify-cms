@@ -20,7 +20,7 @@ export const ProductPageTemplate = ({
         <div className="columns">
           <div className="column is-narrow">
             <h5>CLIENTS</h5>
-            {clients.map(({ name }) => (
+            {(clients || []).map(({ name }) => (
               <div key={name}>{name}</div>
             ))}
           </div>
@@ -30,7 +30,7 @@ export const ProductPageTemplate = ({
           </div>
           <div className="column is-narrow">
             <h5>DOWNLOADS</h5>
-            {downloads.map(({ name, link }) => (
+            {(downloads || []).map(({ name, link }) => (
               <a key={link} href={link}>
                 {name}
               </a>
@@ -38,7 +38,7 @@ export const ProductPageTemplate = ({
           </div>
           <div className="column is-narrow">
             <h5>CREDITS</h5>
-            {credits.map(({ name }) => (
+            {(credits || []).map(({ name }) => (
               <div key={name}>{name}</div>
             ))}
           </div>
@@ -70,7 +70,29 @@ const ProductPage = ({ data }) => {
 ProductPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
+      frontmatter: PropTypes.objectOf({
+        company: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        details: PropTypes.objectOf({
+          clients: PropTypes.arrayOf(
+            PropTypes.shape({
+              name: PropTypes.string.isRequired
+            })
+          ),
+          downloads: PropTypes.arrayOf(
+            PropTypes.shape({
+              name: PropTypes.string.isRequired,
+              link: PropTypes.string.isRequired
+            })
+          ),
+          credits: PropTypes.arrayOf(
+            PropTypes.shape({
+              name: PropTypes.string.isRequired
+            })
+          ),
+          deliverables: PropTypes.string
+        })
+      })
     })
   })
 };
