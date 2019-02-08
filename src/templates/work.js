@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import GalleryBlock from "../components/GalleryBlock";
 
 export const WorkTemplate = ({
   title,
   company,
-  details: { clients, deliverables, downloads, credits }
+  details: { clients, deliverables, downloads, credits },
+  gallery_block
 }) => (
   <section className="section section--gradient work">
     <div className="container">
@@ -49,6 +51,9 @@ export const WorkTemplate = ({
         </div>
       </div>
     </div>
+    {(gallery_block || []).map(item => (
+      <GalleryBlock gallery_block={item} />
+    ))}
   </section>
 );
 
@@ -62,7 +67,12 @@ const Work = ({ data }) => {
 
   return (
     <Layout>
-      <WorkTemplate title={f.title} company={f.company} details={f.details} />
+      <WorkTemplate
+        title={f.title}
+        company={f.company}
+        details={f.details}
+        gallery_block={f.gallery_block}
+      />
     </Layout>
   );
 };
@@ -85,6 +95,28 @@ export const workQuery = graphql`
           }
           credits {
             name
+          }
+        }
+        gallery_block {
+          gallery_items {
+            image {
+              childImageSharp {
+                fluid {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
+                  presentationWidth
+                  presentationHeight
+                }
+              }
+            }
           }
         }
       }

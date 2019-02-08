@@ -68,3 +68,17 @@ collections:
               },
             ],
         }
+      - {
+          label: Gallery Block,
+          name: gallery_block,
+          widget: list,
+          fields:
+            [
+              {
+                label: Gallery Items,
+                name: gallery_items,
+                widget: list,
+                fields: [{ label: "Image", name: "image", widget: "image" }],
+              },
+            ],
+        }
