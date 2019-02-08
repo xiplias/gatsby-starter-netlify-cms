@@ -14,6 +14,12 @@ details:
 gallery_block:
   - gallery_items:
       - image: /img/spaces-case-7.jpg
-      - image: /img/pm5544_with_non-pal_signals.png
+  - gallery_items:
+      - image: /img/spaces-case-5.jpg
+      - image: /img/spaces-case-6.jpg
+  - gallery_items:
+      - image: /img/spaces-case-2.jpg
+      - image: /img/spaces_case_3.jpg
+      - image: /img/spaces-case-1.jpg
 ---
 
