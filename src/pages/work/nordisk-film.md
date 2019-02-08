@@ -11,5 +11,9 @@ details:
   downloads:
     - link: 'http://nordiskfilm.dk'
       name: App Store
+gallery_row:
+  - gallery_image:
+      - image: /img/pm5544_with_non-pal_signals.png
+      - image: /img/spaces-case-7.jpg
 ---
 
