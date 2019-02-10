@@ -23,6 +23,6 @@ gallery_block:
       - image: /img/spaces-case-2.jpg
       - image: /img/spaces_case_3.jpg
       - image: /img/spaces-case-1.jpg
-    layout_type: left double size
+    layout_type: right double size
 ---
 
