@@ -14,12 +14,15 @@ details:
 gallery_block:
   - gallery_items:
       - image: /img/spaces-case-7.jpg
+    layout_type: equal
   - gallery_items:
       - image: /img/spaces-case-5.jpg
       - image: /img/spaces-case-6.jpg
+    layout_type: equal
   - gallery_items:
       - image: /img/spaces-case-2.jpg
       - image: /img/spaces_case_3.jpg
       - image: /img/spaces-case-1.jpg
+    layout_type: left double size
 ---
 
