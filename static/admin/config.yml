@@ -57,14 +57,28 @@ collections:
                 fields:
                   [
                     { label: Name, name: name, widget: string },
-                    { label: Link, name: link, widget: string },
+                    {
+                      label: Link,
+                      name: link,
+                      widget: string,
+                      required: false,
+                    },
                   ],
               },
               {
                 label: Credits,
                 name: credits,
                 widget: list,
-                fields: [{ label: Name, name: name, widget: string }],
+                fields:
+                  [
+                    { label: Name, name: name, widget: string },
+                    {
+                      label: Link,
+                      name: link,
+                      widget: string,
+                      required: false,
+                    },
+                  ],
               },
             ],
         }
@@ -75,10 +89,31 @@ collections:
           fields:
             [
               {
+                label: "Layout Type",
+                name: "layout_type",
+                widget: "select",
+                options:
+                  [
+                    "equal",
+                    "fullscreen",
+                    "left double size",
+                    "right double size",
+                  ],
+              },
+              {
                 label: Gallery Items,
                 name: gallery_items,
                 widget: list,
-                fields: [{ label: "Image", name: "image", widget: "image" }],
+                fields:
+                  [
+                    { label: "Image", name: "image", widget: "image" },
+                    {
+                      label: "Vimeo id",
+                      name: "vimeo",
+                      widget: "string",
+                      required: false,
+                    },
+                  ],
               },
             ],
         }

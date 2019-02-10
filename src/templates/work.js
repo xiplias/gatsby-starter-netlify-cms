@@ -98,6 +98,7 @@ export const workQuery = graphql`
           }
         }
         gallery_block {
+          layout_type
           gallery_items {
             image {
               childImageSharp {
