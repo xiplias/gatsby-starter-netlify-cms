@@ -6,13 +6,15 @@ const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
     const first = gallery_items[0];
     const rest = gallery_items.slice(1, gallery_items.length + 1);
     return (
-      <div className="columns">
-        <div className="column is-8">
-          <PreviewCompatibleImage imageInfo={first} />
+      <div className="tile is-ancestor">
+        <div className="tile is-parent">
+          <div className="tile is-child">
+            <PreviewCompatibleImage imageInfo={first} />
+          </div>
         </div>
-        <div className="column is-4">
+        <div className="tile is-4 is-vertical is-parent">
           {(rest || []).map(item => (
-            <div key={item.text} className="has-text-centered">
+            <div key={item.text} className="tile is-child">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           ))}
@@ -23,26 +25,28 @@ const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
     const first = gallery_items[0];
     const rest = gallery_items.slice(1, gallery_items.length + 1);
     return (
-      <div className="columns">
-        <div className="column is-4">
+      <div className="tile is-ancestor">
+        <div className="tile is-4 is-vertical is-parent">
           {(rest || []).map(item => (
-            <div key={item.text} className="has-text-centered">
+            <div key={item.text} className="tile is-child">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           ))}
         </div>
-        <div className="column is-8">
-          <PreviewCompatibleImage imageInfo={first} />
+        <div className="tile is-parent">
+          <div className="tile is-child">
+            <PreviewCompatibleImage imageInfo={first} />
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="columns">
+    <div className="tile is-ancestor">
       {(gallery_items || []).map(item => (
-        <div key={item.text} className="column">
-          <div className="has-text-centered">
+        <div className="tile is-parent">
+          <div key={item.text} className="tile is-child">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
         </div>
