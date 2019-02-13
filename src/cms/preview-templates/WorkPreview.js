@@ -8,6 +8,7 @@ const WorkPreview = ({ entry, getAsset }) => {
       title={entry.getIn(["data", "title"])}
       company={entry.getIn(["data", "company"])}
       details={entry.getIn(["data", "details"]).toJS()}
+      gallery_block={entry.getIn(["data", "gallery_block"]).toJS()}
     />
   );
 };
