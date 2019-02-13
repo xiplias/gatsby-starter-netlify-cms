@@ -6,7 +6,9 @@ details:
   clients:
     - name: Nordisk Film
   credits:
-    - name: Nordisk Film
+    - link: 'http://google.com'
+      name: Nordisk Film
+    - name: Test
   deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
     - link: 'http://nordiskfilm.dk'
