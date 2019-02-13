@@ -45,9 +45,15 @@ export const WorkTemplate = ({
           <div className="column is-narrow">
             <h5 className="work-details-title">CREDITS</h5>
             <div className="work-details-text">
-              {(credits || []).map(({ name }) => (
-                <div key={name}>{name}</div>
-              ))}
+              {(credits || []).map(({ name, link }) =>
+                link ? (
+                  <a key={link} href={link}>
+                    {name} ›
+                  </a>
+                ) : (
+                  <div>{name}</div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -97,6 +103,7 @@ export const workQuery = graphql`
           }
           credits {
             name
+            link
           }
         }
         gallery_block {
