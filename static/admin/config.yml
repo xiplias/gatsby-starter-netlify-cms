@@ -82,6 +82,9 @@ collections:
               },
             ],
         }
+      - { label: "Main Image", name: "mainImage", widget: "image" }
+      - { label: Preview, name: preview, widget: string }
+      - { label: Story, name: story, widget: text }
       - {
           label: Gallery Block,
           name: gallery_block,

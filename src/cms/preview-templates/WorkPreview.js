@@ -8,7 +8,10 @@ const WorkPreview = ({ entry, getAsset }) => {
       title={entry.getIn(["data", "title"])}
       company={entry.getIn(["data", "company"])}
       details={entry.getIn(["data", "details"]).toJS()}
+      mainImage={entry.getIn(["data", "mainImage"])}
       gallery_block={entry.getIn(["data", "gallery_block"]).toJS()}
+      preview={entry.getIn(["data", "preview"])}
+      story={entry.getIn(["data", "story"])}
     />
   );
 };

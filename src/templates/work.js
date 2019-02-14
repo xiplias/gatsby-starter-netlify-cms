@@ -3,12 +3,16 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import GalleryBlock from "../components/GalleryBlock";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const WorkTemplate = ({
   title,
   company,
   details: { clients, deliverables, downloads, credits },
-  gallery_block
+  gallery_block,
+  preview,
+  story,
+  mainImage
 }) => (
   <section className="section section--gradient work">
     <div className="container">
@@ -20,7 +24,7 @@ export const WorkTemplate = ({
       </div>
       <div className="work-details">
         <div className="columns">
-          <div className="column is-narrow">
+          <div className="column is-narrow" style={{ maxWidth: "23.333%" }}>
             <h5 className="work-details-title">CLIENTS</h5>
             <div className="work-details-text">
               {(clients || []).map(({ name }) => (
@@ -28,11 +32,17 @@ export const WorkTemplate = ({
               ))}
             </div>
           </div>
-          <div className="column is-3">
+          <div
+            className="column is-narrow is-offset-1"
+            style={{ maxWidth: "23.333%" }}
+          >
             <h5 className="work-details-title">DELIVERABLES</h5>
             <div className="work-details-text">{deliverables}</div>
           </div>
-          <div className="column is-narrow">
+          <div
+            className="column is-narrow is-offset-1"
+            style={{ maxWidth: "23.333%" }}
+          >
             <h5 className="work-details-title">DOWNLOADS</h5>
             <div className="work-details-text">
               {(downloads || []).map(({ name, link }) => (
@@ -42,7 +52,10 @@ export const WorkTemplate = ({
               ))}
             </div>
           </div>
-          <div className="column is-narrow">
+          <div
+            className="column is-narrow is-offset-1"
+            style={{ maxWidth: "23.333%" }}
+          >
             <h5 className="work-details-title">CREDITS</h5>
             <div className="work-details-text">
               {(credits || []).map(({ name, link }) =>
@@ -55,6 +68,20 @@ export const WorkTemplate = ({
                 )
               )}
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <PreviewCompatibleImage imageInfo={mainImage} />
+    <div className="text-presentation">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-4">
+            <div className="preview-text">{preview}</div>
+          </div>
+          <div className="column is-6 is-offset-1">
+            <div className="story-text">{story}</div>
           </div>
         </div>
       </div>
@@ -79,6 +106,9 @@ const Work = ({ data }) => {
         title={f.title}
         company={f.company}
         details={f.details}
+        mainImage={f.mainImage}
+        preview={f.preview}
+        story={f.story}
         gallery_block={f.gallery_block}
       />
     </Layout>
@@ -104,6 +134,26 @@ export const workQuery = graphql`
           credits {
             name
             link
+          }
+        }
+        preview
+        story
+        mainImage {
+          childImageSharp {
+            fluid {
+              base64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+              originalImg
+              originalName
+              presentationWidth
+              presentationHeight
+            }
           }
         }
         gallery_block {

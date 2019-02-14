@@ -6,13 +6,14 @@ details:
   clients:
     - name: Nordisk Film
   credits:
-    - link: 'http://google.com'
+    - link: "http://google.com"
       name: Nordisk Film
     - name: Test
-  deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
+  deliverables: "Concept, Visual Identity, Product Design, Development, Backend Development."
   downloads:
-    - link: 'http://nordiskfilm.dk'
+    - link: "http://nordiskfilm.dk"
       name: App Store
+mainImage: /img/spaces-case-7.jpg
 preview: >-
   With Nordisk Film we embarked on a journey to make a mobile tailored
   experience for their amazing cinemas across Denmark and Norway.
@@ -50,4 +51,3 @@ gallery_block:
       - image: /img/spaces-case-1.jpg
     layout_type: right double size
 ---
-
