@@ -7,11 +7,11 @@ details:
     - name: SPACE10
   credits:
     - link: 'https://olleengstrom.tv/'
-      name: Olle Engström ›
+      name: Olle Engström
     - link: 'https://foam.studio/'
-      name: Foam ›
+      name: Foam
     - link: 'http://norgram.co/'
-      name: Norgram ›
+      name: Norgram
   deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
     - link: 'http://nordiskfilm.dk'
