@@ -35,8 +35,8 @@ collections:
           widget: "hidden",
           default: "work",
         }
-      - { label: Title, name: title, widget: string }
       - { label: Company, name: company, widget: string }
+      - { label: Title, name: title, widget: string }
       - {
           label: Details,
           name: details,
