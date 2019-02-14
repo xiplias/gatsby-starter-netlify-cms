@@ -1,6 +1,6 @@
 ---
 templateKey: work
-title: Exploring a  Driverless Future.
+title: Exploring a  driverless future.
 company: SPACES ON WHEELS
 details:
   clients:
