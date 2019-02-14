@@ -1,42 +1,44 @@
 ---
 templateKey: work
-title: A better cinema experience.
-company: BEOPLAY
+title: Exploring a  Driverless Future.
+company: SPACES ON WHEELS
 details:
   clients:
-    - name: Nordisk Film
+    - name: SPACE10
   credits:
-    - link: "http://google.com"
-      name: Nordisk Film
-    - name: Test
-  deliverables: "Concept, Visual Identity, Product Design, Development, Backend Development."
+    - link: 'https://olleengstrom.tv/'
+      name: Olle Engström ›
+    - link: 'https://foam.studio/'
+      name: Foam ›
+    - link: 'http://norgram.co/'
+      name: Norgram ›
+  deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
-    - link: "http://nordiskfilm.dk"
+    - link: 'http://nordiskfilm.dk'
       name: App Store
 mainImage: /img/spaces-case-7.jpg
 preview: >-
-  With Nordisk Film we embarked on a journey to make a mobile tailored
-  experience for their amazing cinemas across Denmark and Norway.
+  Spaces on Wheels is a playful research project that invites people to envision
+  the profound paradigm shift the development of self-driving cars could have on
+  our everyday lives.
 story: >-
-  Over the past 100 years, Nordisk Film has been synonymous with great movie
-  experiences and long lasting cinema moments for the people of Scandinavia. 
+  We are on the verge of what could be the most significant period of change in
+  the automobile industry. Technologies like electrification, connected and
+  automated driving are making notable progress. One day, in the not so distant
+  future; fully autonomous vehicles could be a common occurrence on our everyday
+  streets. This would not only redefine how people and goods move around our
+  cities, but also redefine the very fabric of our daily lives. With this in
+  mind, we have been working with IKEA‘s future living lab, SPACE10 to bring
+  their exploration of urban mobility to life. 
 
-  For the evergrowing range of events and movies, Nordisk Film were in need of a
-  new platform to connect with an audience that is increasingly mobile-first.
-  Alongside Nordisk Film, we have delivered a best-in-class mobile booking
-  experience, that appeals to a broad age group while maintaining the respect 
 
-  for the core of Nordisk Film; the movies. 
-
-
-  The Nordisk Film app has plenty to offer cinema-goers; find all the latest new
-  and upcoming movies, watch trailers, read reviews and browse movie showtimes
-  directly from the app. Along with a superiour booking experience, we have been
-  sweating the details to design and build a state-of-the-art payment flow to
-  deliver the first truly native booking experience in Scandinavia. With the new
-  Nordisk Film app it is faster and more convenient to share the payment with
-  friends, get reservation reminders and receive tickets directly on your
-  device.
+  Spaces on Wheels explores how car interiors will change once automotive
+  vehicles become commonplace. It is comprised of seven concepts — office, cafe,
+  healthcare, farm, play, hotel, and shop — each of which addresses a specific
+  use. To allow people to envision a future ecosystem of flexible, purpose-built
+  spaces that are available on demand and designed to accommodate diverse needs
+  and lifestyles, you can order and explore each of the 7 Spaces on Wheels
+  directly from your phone via augmented reality.
 gallery_block:
   - gallery_items:
       - image: /img/spaces-case-7.jpg
@@ -51,3 +53,4 @@ gallery_block:
       - image: /img/spaces-case-1.jpg
     layout_type: right double size
 ---
+
