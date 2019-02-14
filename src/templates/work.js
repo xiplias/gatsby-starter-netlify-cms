@@ -60,9 +60,11 @@ export const WorkTemplate = ({
             <div className="work-details-text">
               {(credits || []).map(({ name, link }) =>
                 link ? (
-                  <a key={link} href={link}>
-                    {name} ›
-                  </a>
+                  <div>
+                    <a key={link} href={link}>
+                      {name} ›
+                    </a>
+                  </div>
                 ) : (
                   <div>{name}</div>
                 )
@@ -72,8 +74,8 @@ export const WorkTemplate = ({
         </div>
       </div>
     </div>
-
     <PreviewCompatibleImage imageInfo={mainImage} />
+
     <div className="text-presentation">
       <div className="container">
         <div className="columns">
