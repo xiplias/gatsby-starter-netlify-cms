@@ -2,21 +2,26 @@
 
 @font-face
   font-family: "BaconBold"
-  src: url("/fonts/BaconBold.woff2") format("woff2"),url("/fonts/BaconBold.woff") format("woff"),url("/fonts/BaconBold.otf") format("opentype")
+  src: url("/fonts/BaconBold.woff2") format("woff2"),url("/fonts/BaconBold.woff") format("woff"),url("/fonts/BaconBold.ttf") format("opentype")
 
 @font-face
   font-family: "BaconVeryBold"
-  src: url("/fonts/BaconVeryBold.woff2") format("woff2"),url("/fonts/BaconVeryBold.woff") format("woff"),url("/fonts/BaconVeryBold.otf") format("opentype")
+  src: url("/fonts/BaconVeryBold.woff2") format("woff2"),url("/fonts/BaconVeryBold.woff") format("woff"),url("/fonts/BaconVeryBold.ttf") format("opentype")
 
 
 @font-face
   font-family: "BaconLight"
-  src: url("/fonts/BaconLight.woff2") format("woff2"),url("/fonts/BaconLight.woff") format("woff"),url("/fonts/BaconLight.otf") format("opentype")
+  src: url("/fonts/BaconLight.woff2") format("woff2"),url("/fonts/BaconLight.woff") format("woff"),url("/fonts/BaconLight.ttf") format("opentype")
         
 @font-face
   font-family: "BaconRegular"
-  src: url("/fonts/BaconRegular.woff2") format("woff2"),url("/fonts/BaconRegular.woff") format("woff"),url("/fonts/BaconRegular.otf") format("opentype")
+  src: url("/fonts/BaconRegular.woff2") format("woff2"),url("/fonts/BaconRegular.woff") format("woff"),url("/fonts/BaconRegular.ttf") format("opentype")
         
+@font-face
+  font-family: "LangebroDisplay"
+  src: url("/fonts/LangebroDisplay.woff2") format("woff2"),url("/fonts/LangebroDisplay.woff") format("woff"),url("/fonts/LangebroDisplay.ttf") format("opentype")
+        
+
 
 // Config vars
 // Kalidi logo brand color: #FD461E
@@ -28,6 +33,8 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 
 .navbar 
+  margin-bottom: 150px
+
   .navbar-menu
     margin-top: 27px
     box-shadow:none !important
@@ -37,7 +44,30 @@ $body-color: #333
     font-weight: bold
     letter-spacing: 2.5px
     color: #181818
-    margin: 0 17.5px
+
+    img
+      margin-top: 25px
+
+.page-title
+  .pre-title
+    font-family: BaconVeryBold
+    color: rgba(24, 24, 24, 0.6)
+    font-size: 13px
+    margin-bottom: 18px
+    letter-spacing: 2.57px
+  .title
+    font-family: LangebroDisplay
+    font-size: 62px
+    line-height: 56px
+    margin-bottom: 26px
+    width: 50%
+  .description    
+    font-family: BaconLight
+    font-size: 18px
+    line-height: 30px
+    margin-bottom: 93px
+    width: 80%
+
 
 // Helper Classes
 .full-width-image-container
@@ -55,6 +85,8 @@ $body-color: #333
 
 .margin-top-0
   margin-top: 0 !important
+
+
 
 .work 
   .work-details
