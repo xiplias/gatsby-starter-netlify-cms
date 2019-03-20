@@ -24,11 +24,14 @@ export default class NewsIndexPage extends React.Component {
                 <div className="columns is-multiline">
                   {posts.map(({ node: post }) => (
                     <div key={post.id} className="column is-4">
-                      <h3>
-                        <Link
-                          className="has-text-primary"
-                          to={post.fields.slug}
-                        >
+                      <div
+                        className="mock-image"
+                        style={{ width: "100%", height: 250 }}
+                      >
+                        &nbsp;
+                      </div>
+                      <h3 className="news-item-title">
+                        <Link to={post.fields.slug}>
                           {post.frontmatter.title}
                         </Link>
                       </h3>
