@@ -4,11 +4,12 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import GalleryBlock from "../components/GalleryBlock";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import PageTitle from "../components/PageTitle";
 
 export const WorkTemplate = ({
   title,
   company,
-  details: { clients, deliverables, downloads, credits },
+  details: { clients, deliverables, downloads, credits, offices },
   gallery_block,
   preview,
   story,
@@ -17,14 +18,22 @@ export const WorkTemplate = ({
   <section className="section section--gradient work">
     <div className="container">
       <div className="columns">
-        <div className="column is-12">
-          <h5 className="work-product-title">{company}</h5>
-          <h3 className="work-title">{title}</h3>
-        </div>
+        <PageTitle preTitle={company} title={title} />
       </div>
       <div className="work-details">
         <div className="columns">
           <div className="column is-narrow" style={{ maxWidth: "23.333%" }}>
+            <h5 className="work-details-title">OFFICE</h5>
+            <div className="work-details-text">
+              {(offices || []).map(({ name }) => (
+                <div key={name}>{name}</div>
+              ))}
+            </div>
+          </div>
+          <div
+            className="column is-narrow is-offset-1"
+            style={{ maxWidth: "23.333%" }}
+          >
             <h5 className="work-details-title">CLIENTS</h5>
             <div className="work-details-text">
               {(clients || []).map(({ name }) => (
@@ -106,6 +115,7 @@ const Work = ({ data }) => {
     <Layout>
       <WorkTemplate
         title={f.title}
+        offices={f.offices}
         company={f.company}
         details={f.details}
         mainImage={f.mainImage}
@@ -125,6 +135,9 @@ export const workQuery = graphql`
         company
         title
         details {
+          offices {
+            name
+          }
           clients {
             name
           }

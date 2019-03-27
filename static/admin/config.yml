@@ -7,7 +7,7 @@ public_folder: /img
 
 collections:
   - name: "news"
-    label: "Newws"
+    label: "News"
     folder: "src/pages/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -43,6 +43,12 @@ collections:
           widget: object,
           fields:
             [
+              {
+                label: Offices,
+                name: offices,
+                widget: list,
+                fields: [{ label: Name, name: name, widget: string }],
+              },
               {
                 label: Clients,
                 name: clients,
