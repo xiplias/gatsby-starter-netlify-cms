@@ -3,13 +3,11 @@ templateKey: work
 company: NF BIO
 title: A better cinema experience.
 details:
-  offices:
-    - name: Copenhagen
   clients:
     - name: Nordisk Film
   credits:
     - name: Should be optional
-  deliverables: "Concept, Visual Identity, Product Design, Development, Backend Development."
+  deliverables: 'Concept, Visual Identity, Product Design, Development, Backend Development.'
   downloads:
     - link: >-
         https://itunes.apple.com/dk/app/nordisk-film-biografer/id895358735?l=da&mt=8
@@ -17,7 +15,9 @@ details:
     - link: >-
         https://play.google.com/store/apps/details?id=com.propeople.android.nfbio&hl=dk
       name: Google Play
-mainImage: /img/nf_hero.jpg
+  offices:
+    - name: Copenhagen
+mainImage: /img/10_case.jpg
 preview: With Nordisk Film we embarked on a journey to make a mobile tailore
 story: >-
   Over the past 100 years, Nordisk Film has been synonymous with great movie
@@ -58,3 +58,4 @@ gallery_block:
       - image: /img/16_case.jpg
     layout_type: left double size
 ---
+
