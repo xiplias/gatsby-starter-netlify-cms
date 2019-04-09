@@ -89,12 +89,31 @@ $body-color: #333
 .margin-top-0
   margin-top: 0 !important
 
-h3.news-item-title
-  font-family: BaconVeryBold
+.news-item
   font-size: 14px
   line-height: 25px
 
-  a
+  .news-item-image
+    margin-bottom: 23px
+  .news-item-title
+    font-family: BaconBold
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 10px
+
+    a
+      color: #181818
+  
+  .news-item-preview 
+    margin-bottom: 15px
+
+  .news-item-date
+    color: rgba(24, 24, 24, 0.5)
+    padding-right: 8px
+
+  .news-item-more
+    font-family: BaconBold
+    font-size: 15px
     color: #181818
 
 .work 
@@ -128,7 +147,6 @@ h3.news-item-title
     .story-text
       font-family: BaconRegular
       font-size: 16px
-
-
+  
 
 @import "~bulma"

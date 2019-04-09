@@ -20,33 +20,32 @@ export default class NewsIndexPage extends React.Component {
             />
 
             <div className="container">
-              <div className="content">
-                <div className="columns is-multiline">
-                  {posts.map(({ node: post }) => (
-                    <div key={post.id} className="column is-4">
-                      <div
-                        className="mock-image"
-                        style={{ width: "100%", height: 250 }}
-                      >
-                        &nbsp;
-                      </div>
-                      <h3 className="news-item-title">
-                        <Link to={post.fields.slug}>
-                          {post.frontmatter.title}
-                        </Link>
-                      </h3>
-                      <p>
-                        <small className="news-item-date">
-                          {post.frontmatter.date}
-                        </small>
-                        {post.excerpt}
-                        <br />
-                        <br />
-                        <Link to={post.fields.slug}>Read more ›</Link>
-                      </p>
+              <div className="columns is-multiline">
+                {posts.map(({ node: post }) => (
+                  <div key={post.id} className="column is-4 news-item">
+                    <div
+                      className="mock-image news-item-image"
+                      style={{ width: "100%", height: 250 }}
+                    >
+                      &nbsp;
                     </div>
-                  ))}
-                </div>
+                    <h3 className="news-item-title">
+                      <Link to={post.fields.slug}>
+                        {post.frontmatter.title}
+                      </Link>
+                    </h3>
+                    <p className="news-item-preview">
+                      <span className="news-item-date">
+                        {post.frontmatter.date}
+                      </span>
+                      {post.excerpt}
+                    </p>
+
+                    <Link to={post.fields.slug} className="news-item-more">
+                      Read more ›
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
