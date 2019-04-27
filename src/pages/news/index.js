@@ -29,11 +29,11 @@ export default class NewsIndexPage extends React.Component {
                     >
                       &nbsp;
                     </div>
-                    <h3 className="news-item-title">
+                    <h2>
                       <Link to={post.fields.slug}>
                         {post.frontmatter.title}
                       </Link>
-                    </h3>
+                    </h2>
                     <p className="news-item-preview">
                       <span className="news-item-date">
                         {post.frontmatter.date}
