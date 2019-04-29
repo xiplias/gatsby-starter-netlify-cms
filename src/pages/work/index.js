@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import PageTitle from "../../components/PageTitle";
+import ImageBox from "../../components/ImageBox";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -18,24 +19,17 @@ export default class IndexPage extends React.Component {
               title="AWARD WINNING products
               that put people first"
               description="For 9 years, we have been in the eye of the digital transformation whirlwind, untangling complexity, enhancing experiences, reducing costs, perfecting execution. Kindly find a few examples of recent work we have done below."
-            />{" "}
+            />
             <div className="container">
               <div className="columns is-multiline">
                 {posts.map(({ node: post }) => (
                   <div key={post.id} className="column is-4 work-item">
-                    <Link to={post.fields.slug}>
-                      <div
-                        className="mock-image news-item-image"
-                        style={{ width: "100%", height: 425 }}
-                      >
-                        &nbsp;
-                      </div>
-                    </Link>
-                    <h2>
-                      <Link to={post.fields.slug}>
-                        {post.frontmatter.title}
-                      </Link>
-                    </h2>
+                    <ImageBox
+                      height={425}
+                      title={post.frontmatter.title}
+                      subtitle={post.frontmatter.company}
+                      to={post.fields.slug}
+                    />
                   </div>
                 ))}
               </div>
@@ -70,6 +64,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            company
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
