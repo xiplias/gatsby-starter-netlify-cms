@@ -20,17 +20,6 @@
 @font-face
   font-family: "LangebroDisplay"
   src: url("/fonts/LangebroDisplay.woff2") format("woff2"),url("/fonts/LangebroDisplay.woff") format("woff"),url("/fonts/LangebroDisplay.ttf") format("opentype")
-        
-
-
-// Config vars
-// Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
 
 h2
   font-family: LangebroDisplay
@@ -51,10 +40,22 @@ h3
 
 h4
   font-family: BaconVeryBold
-  font-size: 11px !important
+  font-size: 12px !important
   font-weight: bold
-  color: #b7b7b7
+  color: rgba(24, 24, 24, 0.5);
   padding-bottom: 8px !important
+
+.big-text
+  margin: 90px 0
+  font-size: 30px
+  font-weight: 300
+  line-height: 1.67
+  letter-spacing: 0.5px
+  color: #181818
+  width: 60%
+
+  h4
+    padding-bottom: 22px
 
 .navbar 
   margin-bottom: 150px
@@ -131,6 +132,9 @@ h4
     font-family: BaconBold
     font-size: 15px
     color: #181818
+
+.people-group 
+  margin-bottom: 50px
 
 .work 
   .work-details
