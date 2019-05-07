@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "employee"
     label: "Employee"
-    folder: "src/pages/employees"
+    folder: "src/pages/employee"
     create: true
     fields:
       - {
