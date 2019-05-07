@@ -1,7 +1,7 @@
 ---
 templateKey: employee
 title: Test
-name: Test
-avatar: /img/spaces-case-6.jpg
+name: Anders
+avatar: /img/10_case.jpg
 ---
 
