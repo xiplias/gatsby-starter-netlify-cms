@@ -1,22 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import PageTitle from "../../components/PageTitle";
+import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
 
-export default class IndexPage extends React.Component {
+export default class WorkIndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    const { title, pretitle, description } = data.markdownRemark.frontmatter;
+    console.log(data);
 
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <PageTitle
-              preTitle="WORK"
-              title="WORK WORK WORK"
-              description="WORK WORK WORK"
+              preTitle={pretitle}
+              title={title}
+              description={description}
             />
             {posts.map(({ node: post }) => (
               <div
@@ -39,7 +41,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
+WorkIndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array
@@ -48,7 +50,7 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query WorkQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "work" } } }
@@ -66,6 +68,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
         }
+      }
+    }
+
+    markdownRemark(frontmatter: { templateKey: { eq: "work-index" } }) {
+      frontmatter {
+        title
+        pretitle
+        description
       }
     }
   }
