@@ -1,10 +1,10 @@
-import React from "react";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import React from 'react'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
-  if (gallery_block.layout_type === "left double size") {
-    const first = gallery_items[0];
-    const rest = gallery_items.slice(1, gallery_items.length + 1);
+  if (gallery_block.layout_type === 'left double size') {
+    const first = gallery_items[0]
+    const rest = gallery_items.slice(1, gallery_items.length + 1)
     return (
       <div className="tile is-ancestor">
         <div className="tile is-parent">
@@ -20,10 +20,10 @@ const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
           ))}
         </div>
       </div>
-    );
-  } else if (gallery_block.layout_type === "right double size") {
-    const first = gallery_items[0];
-    const rest = gallery_items.slice(1, gallery_items.length + 1);
+    )
+  } else if (gallery_block.layout_type === 'right double size') {
+    const first = gallery_items[0]
+    const rest = gallery_items.slice(1, gallery_items.length + 1)
     return (
       <div className="tile is-ancestor">
         <div className="tile is-4 is-vertical is-parent">
@@ -39,7 +39,7 @@ const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -52,7 +52,7 @@ const GalleryBlock = ({ gallery_block: { gallery_items }, gallery_block }) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default GalleryBlock;
+export default GalleryBlock

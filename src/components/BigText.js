@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function BigText({ children, title }) {
   return (
@@ -6,5 +6,5 @@ export default function BigText({ children, title }) {
       <h4>{title}</h4>
       {children}
     </div>
-  );
+  )
 }

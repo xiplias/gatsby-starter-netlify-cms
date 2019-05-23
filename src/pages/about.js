@@ -1,8 +1,8 @@
-import React from "react";
-import Layout from "../components/Layout";
-import PageTitle from "../components/PageTitle";
-import PeopleGroup from "../components/PeopleGroup";
-import BigText from "../components/BigText";
+import React from 'react'
+import Layout from '../components/Layout'
+import PageTitle from '../components/PageTitle'
+import PeopleGroup from '../components/PeopleGroup'
+import BigText from '../components/BigText'
 
 export default class AboutIndexPage extends React.Component {
   render() {
@@ -28,6 +28,6 @@ WITH A COMPULSION TO CREATE"
           </div>
         </section>
       </Layout>
-    );
+    )
   }
 }

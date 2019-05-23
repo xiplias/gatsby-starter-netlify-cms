@@ -1,8 +1,8 @@
-import React from "react";
-import ImageBox from "./ImageBox";
+import React from 'react'
+import ImageBox from './ImageBox'
 
 export default function PeopleGroup({ name, people }) {
-  console.log(people);
+  console.log(people)
   return (
     <div className="people-group">
       {name && <h2>{name}</h2>}
@@ -20,5 +20,5 @@ export default function PeopleGroup({ name, people }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

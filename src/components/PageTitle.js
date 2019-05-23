@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default ({ preTitle, title, description }) => (
   <div className="page-title">
@@ -6,4 +6,4 @@ export default ({ preTitle, title, description }) => (
     <h1 className="title">{title}</h1>
     <div className="description">{description}</div>
   </div>
-);
+)

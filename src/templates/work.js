@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import GalleryBlock from "../components/GalleryBlock";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import PageTitle from "../components/PageTitle";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import GalleryBlock from '../components/GalleryBlock'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PageTitle from '../components/PageTitle'
 
 export const WorkTemplate = ({
   title,
@@ -13,7 +13,7 @@ export const WorkTemplate = ({
   gallery_block,
   preview,
   story,
-  mainImage
+  mainImage,
 }) => (
   <section className="section section--gradient work">
     <div className="container">
@@ -22,7 +22,7 @@ export const WorkTemplate = ({
       </div>
       <div className="work-details">
         <div className="columns">
-          <div className="column is-narrow" style={{ maxWidth: "23.333%" }}>
+          <div className="column is-narrow" style={{ maxWidth: '23.333%' }}>
             <h5 className="work-details-title">OFFICE</h5>
             <div className="work-details-text">
               {(offices || []).map(({ name }) => (
@@ -32,7 +32,7 @@ export const WorkTemplate = ({
           </div>
           <div
             className="column is-narrow is-offset-1"
-            style={{ maxWidth: "23.333%" }}
+            style={{ maxWidth: '23.333%' }}
           >
             <h5 className="work-details-title">CLIENTS</h5>
             <div className="work-details-text">
@@ -43,14 +43,14 @@ export const WorkTemplate = ({
           </div>
           <div
             className="column is-narrow is-offset-1"
-            style={{ maxWidth: "23.333%" }}
+            style={{ maxWidth: '23.333%' }}
           >
             <h5 className="work-details-title">DELIVERABLES</h5>
             <div className="work-details-text">{deliverables}</div>
           </div>
           <div
             className="column is-narrow is-offset-1"
-            style={{ maxWidth: "23.333%" }}
+            style={{ maxWidth: '23.333%' }}
           >
             <h5 className="work-details-title">DOWNLOADS</h5>
             <div className="work-details-text">
@@ -63,7 +63,7 @@ export const WorkTemplate = ({
           </div>
           <div
             className="column is-narrow is-offset-1"
-            style={{ maxWidth: "23.333%" }}
+            style={{ maxWidth: '23.333%' }}
           >
             <h5 className="work-details-title">CREDITS</h5>
             <div className="work-details-text">
@@ -101,15 +101,15 @@ export const WorkTemplate = ({
       <GalleryBlock gallery_block={item} />
     ))}
   </section>
-);
+)
 
 WorkTemplate.propTypes = {
   title: PropTypes.string,
-  company: PropTypes.string
-};
+  company: PropTypes.string,
+}
 
 const Work = ({ data }) => {
-  const { frontmatter: f } = data.markdownRemark;
+  const { frontmatter: f } = data.markdownRemark
 
   return (
     <Layout>
@@ -124,9 +124,9 @@ const Work = ({ data }) => {
         gallery_block={f.gallery_block}
       />
     </Layout>
-  );
-};
-export default Work;
+  )
+}
+export default Work
 
 export const workQuery = graphql`
   query Work($id: String!) {
@@ -174,4 +174,4 @@ export const workQuery = graphql`
       }
     }
   }
-`;
+`

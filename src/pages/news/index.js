@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import PageTitle from "../../components/PageTitle";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
+import Layout from '../../components/Layout'
+import PageTitle from '../../components/PageTitle'
 
 export default class NewsIndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <Layout>
@@ -25,7 +25,7 @@ export default class NewsIndexPage extends React.Component {
                   <div key={post.id} className="column is-4 news-item">
                     <div
                       className="mock-image news-item-image"
-                      style={{ width: "100%", height: 250 }}
+                      style={{ width: '100%', height: 250 }}
                     >
                       &nbsp;
                     </div>
@@ -51,17 +51,17 @@ export default class NewsIndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-    );
+    )
   }
 }
 
 NewsIndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
-};
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
 export const pageQuery = graphql`
   query NewsIndexQuery {
@@ -85,4 +85,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

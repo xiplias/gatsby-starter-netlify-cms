@@ -45,6 +45,65 @@ h4
   color: rgba(24, 24, 24, 0.5);
   padding-bottom: 8px !important
 
+.menu-button 
+  z-index: 9999
+  position: fixed
+  top: 30px
+  right: 135px
+  width: 38px
+  height: 38px
+  background-color: #eeeded
+  border-radius: 19px
+  cursor: pointer
+  padding-left: 9px
+  padding-top: 12px
+
+  &:hover
+    background-color: #ccc
+
+.menu-button-rect-1, .menu-button-rect-2
+  position: absolute
+  width: 20px
+  height: 2px
+  transform: rotate(-45deg)
+  background-color: #000000
+  margin-top: 6px
+
+.menu-button-burger
+  .menu-button-burger-rect
+    width: 20px
+    height: 2px
+    background-color: #000000
+    margin-top: 4px
+
+  .menu-button-burger-rect
+    &:first-child
+      margin-top: 0
+
+.menu-button-rect-2
+  transform: rotate(-135deg)
+
+.menu-items
+  font-family: BaconVeryBold
+  font-size: 18px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: 4.5px
+  text-transform: uppercase
+
+
+  .menu-item 
+    padding-bottom: 38px
+
+    a
+      color: #fff
+
+      &:hover
+        text-decoration: underline
+
+
 .menu
   background: #1a1a1a
   position: fixed
@@ -55,26 +114,7 @@ h4
   z-index: 999
   padding: 98px
 
-  .menu-items
-    font-family: BaconVeryBold
-    font-size: 18px
-    font-weight: bold
-    font-style: normal
-    font-stretch: normal
-    line-height: normal
-    letter-spacing: 4.5px
-    text-transform: uppercase
-
-
-    .menu-item 
-      padding-bottom: 38px
-
-      a
-        color: #fff
-
-        &:hover
-          text-decoration: underline
-
+  
 .big-text
   margin: 90px 0
   font-size: 30px

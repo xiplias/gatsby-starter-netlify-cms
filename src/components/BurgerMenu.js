@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
 class BurgerMenu extends React.Component {
   render() {
-    return <div>asd</div>;
+    return <div>asd</div>
   }
 }
 
-export default BurgerMenu;
+export default BurgerMenu

@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import React from 'react'
+import { Link } from 'gatsby'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export default ({ title, subtitle, to, height, image }) => (
   <div>
@@ -8,12 +8,12 @@ export default ({ title, subtitle, to, height, image }) => (
       {image ? (
         <PreviewCompatibleImage
           imageInfo={image}
-          style={{ width: "100%", height, marginBottom: 30 }}
+          style={{ width: '100%', height, marginBottom: 30 }}
         />
       ) : (
         <div
           className="mock-image news-item-image"
-          style={{ width: "100%", height, marginBottom: 30 }}
+          style={{ width: '100%', height, marginBottom: 30 }}
         >
           &nbsp;
         </div>
@@ -24,4 +24,4 @@ export default ({ title, subtitle, to, height, image }) => (
       <Link to={to}>{title}</Link>
     </h3>
   </div>
-);
+)
